@@ -145,6 +145,8 @@
 
     <script src="https://scarlettqiqi.github.io/palife-awesome/bootstrap_index.js"></script>
     <script src="https://stg1-public.cdn.lifeapp.pingan.com.cn/m/foundation-devtool/standalone-loader-envs.js"></script>
+    <script src="https://stg4-m.lifeapp.pingan.com.cn/m/foundation-devtool/dist/eruda-paenv.js"></script>
+    <script src="https://stg4-m.lifeapp.pingan.com.cn/m/foundation-devtool/dist/eruda.min.js"></script>
 
     <script>
          function getUrlParams (url = window.location.href) {
@@ -173,7 +175,7 @@
 
                 const plugin = renderPlugin()
                 // @ts-ignore
-                console.log('startAgentAppointment1', window.PaLifeAuth)
+                console.log('startAgentAppointment1', plugin.startSignUp)
                 plugin.startSignUp({activityId: activityNo || '20220620794926'})
 
             } catch (error) {

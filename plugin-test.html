@@ -177,6 +177,7 @@
                 // @ts-ignore
                 console.log('startAgentAppointment1', plugin.startSignUp)
                 plugin.startSignUp({activityId: activityNo || '20220620794926'})
+                plugin.startAgentCheck()
 
             } catch (error) {
                 console.error('插件加载错误:', error);

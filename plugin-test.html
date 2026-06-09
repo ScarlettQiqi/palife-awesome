@@ -176,7 +176,7 @@
                 const plugin = renderPlugin()
                 // @ts-ignore
                 console.log('startAgentAppointment1', plugin.startSignUp)
-                plugin.startSignUp({activityId: activityNo || '20220620794926'})
+                plugin.startSignUp({activityId: activityNo || '20220620794926',env: 'test'})
                 plugin.startAgentCheck()
 
             } catch (error) {

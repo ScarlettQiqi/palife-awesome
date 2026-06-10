@@ -108,7 +108,7 @@
 
     <h2>三、在线测试</h2>
     <button class="btn" onclick="loadPlugin()">加载满意度问卷插件</button>
-    <button class="btn" onclick="clearPlugin()">清除插件</button>
+    <button class="btn" onclick="clearPlugin()">测试弹窗</button>
 
     <div id="plugin-container">
         插件将在这里渲染...
@@ -177,7 +177,6 @@
                 // @ts-ignore
                 console.log('startAgentAppointment1', plugin.startSignUp)
                 plugin.startSignUp({activityId: activityNo || '20220620794926',env: 'test'})
-                plugin.startAgentCheck()
 
             } catch (error) {
                 console.error('插件加载错误:', error);
@@ -185,7 +184,24 @@
         }
         
         function clearPlugin() {
-            document.getElementById('plugin-container').innerHTML = '插件已清除';
+            try {
+                const renderPlugin = await window.AwesomePluginsBootstrap.plugins.getPlugin({
+                    pluginName: 'Signup',
+                    env:  'test',
+                    platform: 'web',
+                    assetsKey: 'plugin-appointment',
+                    urlKey: "plugin-appointment",
+                });
+
+                const plugin = renderPlugin()
+                // @ts-ignore
+                console.log('signupPop', plugin.signupPop)
+                plugin.signupPop()
+
+            } catch (error) {
+                console.error('插件加载错误:', error);
+            }
+        }
         }
     </script>
 </body>

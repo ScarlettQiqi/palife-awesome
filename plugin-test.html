@@ -149,6 +149,15 @@
     <script src="https://stg4-m.lifeapp.pingan.com.cn/m/foundation-devtool/dist/eruda.min.js"></script>
 
     <script>
+        if (!window.process) {
+        // @ts-ignore
+        window.process = {}
+      }
+      if (!window.process.env) {
+        window.process.env = {}
+      }
+      // @ts-ignore
+      window.process.env.HACK_FLUID_COMPONENTS = true
          function getUrlParams (url = window.location.href) {
             const search = url.split('#')[0].split('?')[1]
             const params = search ? search.split('&') : []

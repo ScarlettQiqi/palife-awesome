@@ -185,6 +185,15 @@
         
         async function clearPlugin() {
             try {
+                 if (!window.process) {
+                    // @ts-ignore
+                    window.process = {}
+              }
+              if (!window.process.env) {
+                window.process.env = {}
+              }
+              // @ts-ignore
+              window.process.env.HACK_FLUID_COMPONENTS = true
                 const renderPlugin = await window.AwesomePluginsBootstrap.plugins.getPlugin({
                     pluginName: 'Signup',
                     env:  'test',

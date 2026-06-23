@@ -143,21 +143,12 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
     <script src="https://stg1-public.cdn.lifeapp.pingan.com.cn/m/cdn/PALifeOpen/PALifeOpen.2.3.min.js"></script>
-    <script src="https://scarlettqiqi.github.io/palife-awesome/bootstrap_index.js"></script>
+    <script src="https://stg1-public.cdn.lifeapp.pingan.com.cn/m/cdn/awsome/bootstrap_getPlugin.js"></script>
     <script src="https://stg1-public.cdn.lifeapp.pingan.com.cn/m/foundation-devtool/standalone-loader-envs.js"></script>
     <script src="https://stg4-m.lifeapp.pingan.com.cn/m/foundation-devtool/dist/eruda-paenv.js"></script>
     <script src="https://stg4-m.lifeapp.pingan.com.cn/m/foundation-devtool/dist/eruda.min.js"></script>
 
     <script>
-        if (!window.process) {
-        // @ts-ignore
-        window.process = {}
-      }
-      if (!window.process.env) {
-        window.process.env = {}
-      }
-      // @ts-ignore
-      window.process.env.HACK_FLUID_COMPONENTS = true
          function getUrlParams (url = window.location.href) {
             const search = url.split('#')[0].split('?')[1]
             const params = search ? search.split('&') : []
